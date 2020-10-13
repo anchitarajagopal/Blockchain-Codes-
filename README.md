@@ -21,3 +21,18 @@ We use function verify(), to check the following:
   Check if there is any backdating by looking into the timestamps.
 Forking
 Using the fork() function, you may branch out of a chain. 
+
+2. Implementing blockchain in Java 
+A) Creating a block
+A block class is created. It contains:
+. hash will contain the hash of the block and
+. previousHash will contain the hash of the previous block.
+. String data is used to store the data of the block and
+. “long timeStamp” is used to store the timestamp of the block. Here long data type is used to store the number of milliseconds.
+. calculateHash() to generate the hash
+B) Generating Hashes
+This is done using the SHA256 algorithm. SHA is cryptographic hash function which takes input as 20 Bytes and rendered the hash value in hexadecimal number, 40 digits long approx
+C) Storing the blocks
+Now we Now store the blocks in the ArrayList of Block type, along with their hash values by calling the constructor of the Block Class.
+D) Blockchain validity
+We check the validity of the BlockChain by creating a boolean method to check the validity. This method will be implemented in the “Main” class and checks whether the hash is equal to the calculated hash or not. If all the hashes are equal to the calculated hashes, then the block is valid.
